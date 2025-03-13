@@ -10,9 +10,9 @@ router.get('/', (req,res) => {
 });
 
 // show
-router.get('/:id', (req,res) => {
-    const postId = req.params.id
-    res.send(`show the post with id: ${postId}`)
+router.get('/:slug', (req,res) => {
+    const postSlug = req.params.slug
+    res.send(`show the post with id: ${postSlug}`)
 })
 
 // create
@@ -21,21 +21,21 @@ router.post('/', (req,res) => {
 })
 
 // update
-router.put('/:id', (req,res) => {
-    const postId = req.params.id
-    res.send(`update the post with id: ${postId}`)
+router.put('/:slug', (req,res) => {
+    const postSlug = req.params.slug
+    res.send(`update the post with id: ${postSlug}`)
 })
 
 // modify
-router.patch('/:id', (req,res) => {
-    const postId = req.params.id
-    res.send(`modify the post with id: ${postId}`)
+router.patch('/:slug', (req,res) => {
+    const postSlug = req.params.slug
+    res.send(`modify the post with id: ${postSlug}`)
 })
 
 // destroy
-router.delete('/:id', (req,res) => {
-    const postId = req.params.id
-    res.send(`delete the post with id: ${postId}`)
+router.delete('/:slug', (req,res) => {
+    const postSlug = req.params.slug
+    res.send(`delete the post with id: ${postSlug}`)
 })
 
 module.exports = router

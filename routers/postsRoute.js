@@ -16,6 +16,9 @@ router.get('/:slug', (req,res) => {
         if(post.slug === postSlug){
             res.json(post)
         }
+        else {
+            res.json({message: 'Post not found'})
+        }
     })  
 })
 

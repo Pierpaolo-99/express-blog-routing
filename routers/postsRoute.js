@@ -12,7 +12,14 @@ router.get('/', (req,res) => {
 // show
 router.get('/:slug', (req,res) => {
     const postSlug = req.params.slug
-    res.send(`show the post with id: ${postSlug}`)
+    posts.forEach(post => {
+        if(post.slug === postSlug){
+            res.json(post)
+        }
+        else {
+            res.send('Post not found')
+        }
+    })  
 })
 
 // create

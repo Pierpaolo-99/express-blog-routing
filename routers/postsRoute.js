@@ -1,9 +1,12 @@
 const express = require('express');
 const router = express.Router()
 
+// Import posts
+const posts = require('../posts')
+
 // index
 router.get('/', (req,res) => {
-    res.send('Return all posts')
+    res.json(posts)
 });
 
 // show
